@@ -663,7 +663,7 @@ def main():
         "ffmpeg", "-y", "-loglevel", "error",
         "-i", "temp/result.mp4",
         "-i", args.audio,
-        "-c:v", "h264_nvenc",
+        "-c:v", "libx264",
         args.outfile ,
       ])
 

@@ -318,7 +318,7 @@ while True:
     with open('last_file.txt', 'w') as f:
       f.write(temp_input_video)
     print(f"{output_filename} successfully lip synced! It will be found here:")
-    print(output_video)
+    print("<video>" + output_video + "</video>")
 
     #end processing timer and format the time it took
     end_time = time.time()
