@@ -42,9 +42,11 @@ iface = gr.Interface(
     outputs=[
         gr.Video(label="Inference Result")
     ],
-    title="Inference",
+    title="Easy Wav2Lip数字人推理",
+    theme='Kasien/ali_theme_custom',
+    css="footer {visibility: hidden}",
     allow_flagging="never"
 )
 
 # 启动界面
-iface.launch(server_name='0.0.0.0', server_port=7862)
+iface.launch(server_name='0.0.0.0')
