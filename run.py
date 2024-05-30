@@ -36,6 +36,7 @@ debug_mask = config.getboolean('MASK', 'debug_mask')
 batch_process = config.getboolean('OTHER', 'batch_process')
 output_suffix = config['OTHER']['output_suffix']
 include_settings_in_suffix = config.getboolean('OTHER', 'include_settings_in_suffix')
+wav2lip_batch_size = config.getint('OTHER', 'wav2lip_batch_size')
 if g_colab():
 	preview_input = config.getboolean('OTHER', 'preview_input')
 else:
@@ -284,7 +285,8 @@ while True:
       "--nosmooth", str(nosmooth),
       "--debug_mask", str(debug_mask),
       "--preview_settings", str(preview_settings),
-      "--mouth_tracking", str(mouth_tracking)
+      "--mouth_tracking", str(mouth_tracking),
+      "--wav2lip_batch_size", str(wav2lip_batch_size)
   ]
 
   # Run the command
